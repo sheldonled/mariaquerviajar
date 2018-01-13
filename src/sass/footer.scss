@@ -1,0 +1,100 @@
+/************ Footer ****************/
+.site-footer {
+  position: relative;
+  background-color: $color-complement-3;
+  border-top: 1px solid $color-complement-3;
+  margin: 2rem 0 0 0;
+  box-shadow: 0 0 2rem rgba($color: $color-complement-4, $alpha: .2);
+  color: $white;
+  text-shadow: 0 1px 2px rgba($color: $white, $alpha: .2);
+
+  .wrap {
+    padding: 0 1rem 3rem;
+    @include grid;
+    @include grid-template-columns(1fr);
+    @include grid-template-rows(auto);
+    @media #{$medium-up} {
+      @include grid-template-columns(11.25rem 1fr);
+      padding: 2rem 1rem 3rem;
+      max-width: #{upper-bound($large-range)};
+    }
+  }
+
+  .footer__logo {
+    display: flex;
+    justify-content: center;
+    @media #{$medium-up} {
+      @include grid-column(1);
+      @include grid-row(1,2);
+    }
+  }
+  .logo-wrap {
+    background: $white;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    &:visited { 
+      color: $black;
+    }
+    @media #{$large-up} {
+      margin: 0 0 0 1rem;
+    }
+  }
+
+  .about-description {
+    font-size: 1.2rem;
+    text-align: justify;
+    line-height: 1.4rem;
+    margin-bottom: 2rem;
+    @media #{$medium-up} {
+      margin: 0;
+      @include grid-column(2);
+      @include grid-row(1);
+    }
+  }
+
+  a {
+    color: $jet;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: .4rem;
+  }
+  .footer__social{
+    display: flex;
+    justify-content: flex-end;
+    flex-flow: column;
+    @media #{$medium-up} {
+      @include grid-column(2);
+      @include grid-row(2);
+    }
+  }
+  .social {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    font-size: 2rem;
+    height: 2.5rem;
+    @media #{$medium-up} {
+      justify-content: flex-end;
+    }
+  }
+  .social a {
+    margin: 0 0 0 .8rem;
+  }
+}
+
+.logo-sheldonled {
+  display: block;
+  position: absolute;
+  bottom: .5rem;
+  right: .5rem;
+  font-size: 1.5rem;
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+}

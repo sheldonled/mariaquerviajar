@@ -1,0 +1,61 @@
+{
+  "name": "mariaquerviajar",
+  "version": "1.0.0",
+  "description": "WordPress theme for mariaquerviajar.com",
+  "main": "index.php",
+  "scripts": {
+    "build": "npm run clean-dist && npm run make-dist && npm run js-all && npm run css-compile",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean-dist": "rm -rf dist",
+    "make-dist": " mkdir dist && mkdir dist/js && mkdir dist/css",
+    "js-all": "npm run js-lint && npm run js-bundle && npm run js-babel && npm run js-uglify",
+    "js-lint": "eslint src/js/**/*.js -c config/eslintrc.json",
+    "js-bundle": "rollup -c config/rollup.config.js",
+    "js-babel": "babel dist/js/app.js --out-file dist/js/app.es5.js",
+    "js-uglify": "uglifyjs dist/js/app.es5.js -o dist/js/app.min.js",
+    "css-compile": "node-sass src/sass/main.scss dist/css/style.min.css  --output-style compressed"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              "last 2 versions",
+              "ie >= 11"
+            ]
+          }
+        }
+      ]
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sheldonled/mariaquerviajar.git"
+  },
+  "keywords": [
+    "blog",
+    "pt-br",
+    "maria",
+    "quer",
+    "viajar",
+    "dublin"
+  ],
+  "author": "sheldonled",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sheldonled/mariaquerviajar/issues"
+  },
+  "homepage": "https://github.com/sheldonled/mariaquerviajar#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "eslint": "^4.13.1",
+    "node-sass": "^4.7.2",
+    "rollup": "^0.52.3",
+    "uglify-es": "^3.2.2"
+  }
+}
