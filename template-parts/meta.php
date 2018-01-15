@@ -1,33 +1,33 @@
 <?php global $wp;
-/**
- * Array of widgets
- * 0 - Photo of Maria
- * 1 - Main Description
- * 2 - Secondary Description
- * 3 - YouTube video ID
- */
-$widgets = get_widget_data('sidebar');
-$sidebar_img = $widgets[0];
+  /**
+   * Array of widgets
+   * 0 - Photo of Maria
+   * 1 - Main Description
+   * 2 - Secondary Description
+   * 3 - YouTube video ID
+   */
+  $widgets = get_widget_data('sidebar');
+  $sidebar_img = $widgets[0];
 
-$base = get_template_directory_uri();
-$home = esc_url( home_url( '/' ) );
-$url = home_url( $wp->request );
-$name = get_bloginfo('title');
-$title = trim(wp_title("",""));
-$title = ($title === "") ? $name : $name." - ".$title;
-$description = "Uma brasileira que mora em Dublin na Irlanda e compartilha os amores e dissabores de morar na Europa, assim como viagens e todas as descobertas desse novo mundo! 
-Esse blog é pra você que nunca se aventurou na Europa e também pra você que é super viajadão mas sempre tem algo a aprender e a ensinar!
-Vamos nos ajudando e assim evitando o lado negativo da vida para poder aproveitar mais as partes positivas!
-Conto com o seu apoio! Abraço apertado!";
-$ogImg = (is_single()) ? get_the_post_thumbnail_url(get_the_ID(), ["300","300"]) : $sidebar_img->url;
+  $base = get_template_directory_uri();
+  $home = esc_url( home_url( '/' ) );
+  $url = home_url( $wp->request );
+  $name = get_bloginfo('title');
+  $title = trim(wp_title("",""));
+  $title = ($title === "") ? $name : $name." - ".$title;
+  $description = "Uma brasileira que mora em Dublin na Irlanda e compartilha os amores e dissabores de morar na Europa, assim como viagens e todas as descobertas desse novo mundo! 
+  Esse blog é pra você que nunca se aventurou na Europa e também pra você que é super viajadão mas sempre tem algo a aprender e a ensinar!
+  Vamos nos ajudando e assim evitando o lado negativo da vida para poder aproveitar mais as partes positivas!
+  Conto com o seu apoio! Abraço apertado!";
+  $ogImg = (is_single()) ? get_the_post_thumbnail_url(get_the_ID(), ["300","300"]) : $sidebar_img->url;
 ?>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-<link rel="alternate" href="https://mariaquerviajar.com" hreflang="pt-BR" />
+<link rel="alternate" href="<?php echo $url; ?>" hreflang="x-default" />
 <link rel="alternate" type="application/rss+xml" title="Maria quer viajar &raquo; Feed" href="<?php echo $home; ?>feed/" />
-<link rel="manifest" href="<?php echo $base; ?>/config/manifest.json?150120182240">
+<link rel="manifest" href="<?php echo $base; ?>/config/manifest.json?150120182330">
 <link rel="canonical" href="<?php echo $home; ?>" />
 
 <meta name="theme-color" content="#FCD8DC">
@@ -51,19 +51,19 @@ $ogImg = (is_single()) ? get_the_post_thumbnail_url(get_the_ID(), ["300","300"])
 
 
 <!-- Icon -->
-<link rel="shortcut icon" href="<?php echo $base; ?>/img/logo/mqv-36x36.png?150120182240" type="image/x-icon" />
-<link rel="stylesheet" href="<?php echo $base; ?>/dist/css/style.min.css?150120182240">
+<link rel="shortcut icon" href="<?php echo $base; ?>/img/logo/mqv-36x36.png?150120182330" type="image/x-icon" />
+<link rel="stylesheet" href="<?php echo $base; ?>/dist/css/style.min.css?150120182330">
 
 <meta name="application-name" content="<?php echo $name;?>">
 <!-- iPhone -->
 <meta name="apple-mobile-web-app-capable" content="yes">
-<link rel="apple-touch-icon" href="<?php echo $base; ?>/img/logo/mqv-180x180.png?150120182240">
-<link rel="apple-touch-icon" sizes="60x60" href="<?php echo $base; ?>/img/logo/mqv-60x60.png?150120182240">
-<link rel="apple-touch-icon" sizes="76x76" href="<?php echo $base; ?>/img/logo/mqv-76x76.png?150120182240">
-<link rel="apple-touch-icon" sizes="120x120" href="<?php echo $base; ?>/img/logo/mqv-120x120.png?150120182240">
-<link rel="apple-touch-icon" sizes="152x152" href="<?php echo $base; ?>/img/logo/mqv-152x152.png?150120182240">
+<link rel="apple-touch-icon" href="<?php echo $base; ?>/img/logo/mqv-180x180.png?150120182330">
+<link rel="apple-touch-icon" sizes="60x60" href="<?php echo $base; ?>/img/logo/mqv-60x60.png?150120182330">
+<link rel="apple-touch-icon" sizes="76x76" href="<?php echo $base; ?>/img/logo/mqv-76x76.png?150120182330">
+<link rel="apple-touch-icon" sizes="120x120" href="<?php echo $base; ?>/img/logo/mqv-120x120.png?150120182330">
+<link rel="apple-touch-icon" sizes="152x152" href="<?php echo $base; ?>/img/logo/mqv-152x152.png?150120182330">
 
 
-<link rel="preload" href="<?php echo $base; ?>/fonts/icons-mqv.ttf?150120182240" as="font" type="font/ttf">
+<link rel="preload" href="<?php echo $base; ?>/fonts/icons-mqv.ttf?150120182330" as="font" type="font/ttf">
 <link rel="preload" href="<?php echo $base; ?>/img/mqv_logo_text.svg" as="image">
 <title><?php echo $title;?></title>
