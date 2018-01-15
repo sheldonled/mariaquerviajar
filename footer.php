@@ -32,7 +32,7 @@
 /* loadJS */
 (function(w){var loadJS=function(src,cb){"use strict";var ref=w.document.querySelector("script");var script=w.document.createElement("script");script.src=src;script.async=true;ref.parentNode.insertBefore(script,ref);if(cb&&typeof cb==="function"){script.onload=cb}return script};w.loadJS=loadJS})(window);
 /* load Script */
-loadJS("<?php echo get_template_directory_uri(); ?>/dist/js/app.min.js?130120182250", function() {
+loadJS("<?php echo get_template_directory_uri(); ?>/dist/js/app.min.js?150120182240", function() {
   mqv.init();
 });
 /* load Google Analytics */
