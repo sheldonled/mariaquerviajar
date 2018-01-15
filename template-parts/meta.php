@@ -4,7 +4,7 @@
  * 0 - Photo of Maria
  * 1 - Main Description
  * 2 - Secondary Description
- * 3 - YouTube link to be embeded
+ * 3 - YouTube video ID
  */
 $widgets = get_widget_data('sidebar');
 $sidebar_img = $widgets[0];

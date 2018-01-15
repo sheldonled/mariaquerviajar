@@ -4,7 +4,7 @@
    * 0 - Photo of Maria
    * 1 - Main Description
    * 2 - Secondary Description
-   * 3 - YouTube link to be embeded
+   * 3 - YouTube video ID
    */
   $widgets = get_widget_data('sidebar');
   $secondary_desc = $widgets[2];
@@ -40,7 +40,6 @@ loadJS("https://www.googletagmanager.com/gtag/js?id=UA-112399752-1", function() 
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-112399752-1');
-})
+});
 </script>
