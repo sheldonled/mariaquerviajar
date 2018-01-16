@@ -146,11 +146,13 @@
     font-size: 2rem;
     background-color: $white;
     border-radius: 50%;
+    box-shadow: 0 .1rem .5rem rgba($color: $black, $alpha: .2);
     padding: .12em;
     cursor: pointer;
     z-index: 500;
     outline: none;
     transition: all linear .5s;
+    animation: 1s linear 0s 2 normal none running mobile-menu-bump;
     @media #{$medium-up}{
       display: none;
     }
@@ -164,4 +166,11 @@
       display: flex;
     }
   }
+}
+
+/*************************************************/
+@keyframes mobile-menu-bump {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.1);}
+  100% {transform: scale(1);}
 }

@@ -4,7 +4,7 @@
 }
 
 .post-thumbnail--loading {
-  @include animation(2s linear 0s 10 normal forwards running img-bg-loading);
+  animation: 2s linear 0s 10 normal forwards running img-bg-loading;
   &::after {
     content: "";
     display: block;
@@ -60,7 +60,7 @@
   margin: .4rem;
 }
 /*************************************************/
-@include keyframes(img-bg-loading) {
+@keyframes img-bg-loading {
   0% {background-color: darken(white, 2%);}
   50% {background-color: darken(white, 12%);}
   100% {background-color: darken(white, 2%);}
