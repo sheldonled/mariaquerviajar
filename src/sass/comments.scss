@@ -11,6 +11,24 @@
   box-shadow: 0 .1rem .5rem rgba($color: $black, $alpha: .2);
   padding: 0 1rem 1rem 1rem;
   margin: 2rem 0;
+
+  .children {
+    margin: 1rem 0 0;
+  }
+
+  .children .comment {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    list-style: none;
+
+    &:before {
+      background: linear-gradient(to bottom, transparent 0%, rgba($color: $base, $alpha: .2) 100%);
+      content: '';
+      display: block;
+      height: .6rem;
+    }
+  }
 }
 
 .comments-title {
