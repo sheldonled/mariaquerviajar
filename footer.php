@@ -32,7 +32,7 @@
 /* loadJS */
 (function(w){var loadJS=function(src,cb){"use strict";var ref=w.document.querySelector("script");var script=w.document.createElement("script");script.src=src;script.async=true;ref.parentNode.insertBefore(script,ref);if(cb&&typeof cb==="function"){script.onload=cb}return script};w.loadJS=loadJS})(window);
 /* load Script */
-loadJS("<?php echo get_template_directory_uri(); ?>/dist/js/app.min.js?160120180000", function() {
+loadJS("<?php echo get_template_directory_uri(); ?>/dist/js/app.min.js?120420182250", function() {
   mqv.init();
 });
 /* load Google Analytics */
@@ -41,5 +41,11 @@ loadJS("https://www.googletagmanager.com/gtag/js?id=UA-112399752-1", function() 
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'UA-112399752-1');
+});
+/* load Facebook API */
+loadJS("https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12", function() {
+  var fbWarn = document.querySelector(".js-facebook-warn");
+  if(!fbWarn) return;
+  fbWarn.parentNode.removeChild(fbWarn);
 });
 </script>

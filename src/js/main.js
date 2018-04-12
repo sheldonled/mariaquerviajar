@@ -3,6 +3,7 @@ import image from './image.js';
 import instagram from './instagram.js';
 import youtube from './youtube';
 import grid from './grid';
+import commentTabs from './comment-tabs';
 
 window.mqv = {
     init: () => {
@@ -11,5 +12,6 @@ window.mqv = {
         new instagram().init();
         new youtube().loadVideo();
         new grid().placeMainGrid();
+        new commentTabs().init();
     }
 };

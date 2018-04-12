@@ -1,8 +1,39 @@
 .comments-area {
   position: relative;
   width: 100%;
-  margin: 2rem 0 0 0;
+
+  .comments__tabs {
+    border-bottom: 1px solid $black;
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0;
+  }
+  .comments__tab {
+    list-style: none;
+    border: 1px solid $black;
+    border-bottom: 1px solid transparent;
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0 0 -1px;
+    padding: .2rem .5rem;
+    cursor: pointer;
+    &:not(:first-child) {
+      margin: 0 0 -1px -1px;
+    }
+    &.comments__tab--open {
+      border-bottom: 1px solid $white;
+    }
+  }
+  .comments__fb,
+  .comments__wp {
+    display: none;
+    margin: 2rem 0 0 0;
+    &.comments--open {
+      display: block;
+    }
+  }
 }
+
 .comment-list {
   list-style: none;
 }
