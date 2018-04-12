@@ -27,7 +27,7 @@
 
 <link rel="alternate" href="<?php echo $url; ?>" hreflang="x-default" />
 <link rel="alternate" type="application/rss+xml" title="Maria quer viajar &raquo; Feed" href="<?php echo $home; ?>feed/" />
-<link rel="manifest" href="<?php echo $base; ?>/config/manifest.json?120420182250">
+<link rel="manifest" href="<?php echo $base; ?>/config/manifest.json?120420182312">
 <link rel="canonical" href="<?php echo $home; ?>" />
 
 <meta name="theme-color" content="#FCD8DC">
@@ -56,19 +56,19 @@
 
 
 <!-- Icon -->
-<link rel="shortcut icon" href="<?php echo $base; ?>/img/logo/mqv-36x36.png?120420182250" type="image/x-icon" />
-<link rel="stylesheet" href="<?php echo $base; ?>/dist/css/style.min.css?120420182250">
+<link rel="shortcut icon" href="<?php echo $base; ?>/img/logo/mqv-36x36.png?120420182312" type="image/x-icon" />
+<link rel="stylesheet" href="<?php echo $base; ?>/dist/css/style.min.css?120420182312">
 
 <meta name="application-name" content="<?php echo $name;?>">
 <!-- iPhone -->
 <meta name="apple-mobile-web-app-capable" content="yes">
-<link rel="apple-touch-icon" href="<?php echo $base; ?>/img/logo/mqv-180x180.png?120420182250">
-<link rel="apple-touch-icon" sizes="60x60" href="<?php echo $base; ?>/img/logo/mqv-60x60.png?120420182250">
-<link rel="apple-touch-icon" sizes="76x76" href="<?php echo $base; ?>/img/logo/mqv-76x76.png?120420182250">
-<link rel="apple-touch-icon" sizes="120x120" href="<?php echo $base; ?>/img/logo/mqv-120x120.png?120420182250">
-<link rel="apple-touch-icon" sizes="152x152" href="<?php echo $base; ?>/img/logo/mqv-152x152.png?120420182250">
+<link rel="apple-touch-icon" href="<?php echo $base; ?>/img/logo/mqv-180x180.png?120420182312">
+<link rel="apple-touch-icon" sizes="60x60" href="<?php echo $base; ?>/img/logo/mqv-60x60.png?120420182312">
+<link rel="apple-touch-icon" sizes="76x76" href="<?php echo $base; ?>/img/logo/mqv-76x76.png?120420182312">
+<link rel="apple-touch-icon" sizes="120x120" href="<?php echo $base; ?>/img/logo/mqv-120x120.png?120420182312">
+<link rel="apple-touch-icon" sizes="152x152" href="<?php echo $base; ?>/img/logo/mqv-152x152.png?120420182312">
 
 
-<link rel="preload" href="<?php echo $base; ?>/fonts/icons-mqv.ttf?120420182250" as="font" type="font/ttf">
+<link rel="preload" href="<?php echo $base; ?>/fonts/icons-mqv.ttf?120420182312" as="font" type="font/ttf">
 <link rel="preload" href="<?php echo $base; ?>/img/mqv_logo_text.svg" as="image">
 <title><?php echo $title;?></title>

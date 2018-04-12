@@ -81,6 +81,8 @@ if ( post_password_required() ) {
 		<div class="js-facebook-warn">
 			Houve algum erro ao carregar o plugin do Facebook =/
 		</div>
-		<fb:comments href="<?php the_permalink(); ?>" data-numposts="10" data-width="100%"></fb:comments>
+		<fb:comments href="<?php the_permalink(); ?>" data-numposts="10" data-width="100%">
+			Carregando...
+		</fb:comments>
 	</section>
 </div><!-- #comments -->
