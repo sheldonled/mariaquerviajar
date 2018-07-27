@@ -7,15 +7,15 @@ if ( post_password_required() ) {
 <section class="comments-area">
 	<nav aria-label="Tipos de comentários">
 		<ul class="comments__tabs">
-			<li data-target="wp-comments" class="comments__tab comments__tab--open js-comment-tab" aria-label="Comentários">
-				Comentários
+			<li data-target="fb-comments" class="comments__tab comments__tab--open js-comment-tab" aria-label="Comentários no Facebook">
+				<span class="icon__facebook"></span>Comente com Facebook
 			</li>
-			<li data-target="fb-comments" class="comments__tab js-comment-tab" aria-label="Comentários no Facebook">
-				Comente com Facebook
+			<li data-target="wp-comments" class="comments__tab js-comment-tab" aria-label="Comentários">
+				<span class="icon__comments-o"></span>Outros Comentários
 			</li>
 		</ul>
 	</nav>
-	<section data-tab="wp-comments" class="comments__wp comments--open js-comments-container">
+	<section data-tab="wp-comments" class="comments__wp js-comments-container">
 		<?php
 		if ( have_comments() ) : ?>
 			<h2 class="comments-title">
@@ -77,7 +77,7 @@ if ( post_password_required() ) {
 		]);
 		?>
 	</section>
-	<section data-tab="fb-comments" class="comments__fb js-comments-container">
+	<section data-tab="fb-comments" class="comments__fb  comments--open js-comments-container">
 		<div class="js-facebook-warn">
 			Houve algum erro ao carregar o plugin do Facebook =/
 		</div>

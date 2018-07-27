@@ -14,14 +14,38 @@
     border-bottom: 1px solid transparent;
     display: flex;
     flex-flow: row nowrap;
+    align-items: center;
     margin: 0 0 -1px;
-    padding: .2rem .5rem;
+    padding: .5rem;
+    font-size: .8rem;
     cursor: pointer;
     &:not(:first-child) {
       margin: 0 0 -1px -1px;
     }
     &.comments__tab--open {
       border-bottom: 1px solid $white;
+    }
+    .icon__facebook,
+    .icon__comments-o {
+      margin: 0 .5rem 0 0;
+      font-size: 1.5rem;
+      color: $white;
+      border-radius: 50%;
+      padding: .2rem;
+    }
+    .icon__facebook {
+      background-color: $blue-facebook;
+    }
+    .icon__comments-o {
+      background-color: $rgba-complement-4;
+    }
+    @media #{$medium-up} {
+      font-size: 1.1rem;
+
+      .icon__facebook,
+      .icon__comments-o {
+        font-size: 2rem;
+      }
     }
   }
   .comments__fb,
