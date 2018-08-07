@@ -11,20 +11,12 @@
             <?php the_title() ?>
           </a>
         </h2>
+        <?php get_template_part( 'template-parts/post-meta' ); ?>
       </header>
       <section class="post-content">
         <?php the_content( __( 'Leia Mais <span class="meta-nav">&raquo;</span>', 'mariaquerviajar' ) ) ?>
       </section>
-      <section class="post-meta">
-        <span class="cat-links">
-            <?php printf( get_the_category_list(', ') ) ?>
-        </span>
-        <span class="pub-date">
-          <?php
-            unset($previousday);
-            printf( __( '%1$s &#8211; %2$s', 'mariaquerviajar' ), the_date( '', '', '', false ), get_the_time('H:i') )
-          ?>
-        </span>
+      <section class="post-tags">
         <?php
           the_tags( __( '<span class="tag-links">Tagged ', 'mariaquerviajar' ), ", ", "</span>" );
           if ( comments_open() || get_comments_number() ) :

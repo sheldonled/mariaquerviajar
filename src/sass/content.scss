@@ -22,13 +22,20 @@ p {
   }
 }
 .content-area.grid {
-  @include grid;
-  @include grid-template-columns(1fr);
-  @include grid-template-rows(min-content);
-  grid-gap: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  
+  .post {
+    width: 100%;
+    margin: .5rem 0;
+  }
+  
   @media #{$medium-up} {
     width: 70%;
-    @include grid-template-columns(1fr 1fr 1fr);
+    .post {
+      width: calc(33.3333% - 1rem);
+      margin: .5rem;
+    }
   }
   p {
     font-size: 1rem;
@@ -39,7 +46,6 @@ p {
 .post-title {
   font-size: 2rem;
   line-height: 2rem;
-  margin-bottom: 2rem;
   font-weight: 500;
   a {
     color: $jet;

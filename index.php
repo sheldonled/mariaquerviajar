@@ -4,7 +4,7 @@
     <?php
     if(have_posts()) : while(have_posts()) : the_post();
     ?>
-      <article id="post-<?php the_ID() ?>">
+      <article id="post-<?php the_ID() ?>" class="post">
         <a href="<?php the_permalink() ?>" title="<?php printf( the_title_attribute('echo=0')  ) ?>" rel="bookmark" class="post-thumbnail" aria-label="Título do Post">
           <div class="post-thumbnail--loading"></div>
           <?php

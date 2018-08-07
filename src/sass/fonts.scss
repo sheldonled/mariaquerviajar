@@ -2,7 +2,7 @@
 /************ Icons ****************/
 @font-face {
   font-family: 'icons-mqv';
-  src: url('../../fonts/icons-mqv.ttf?270720181520') format('truetype');
+  src: url('../../fonts/icons-mqv.ttf?070820181105') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -69,4 +69,10 @@
 }
 .icon__youtube:before {
   content: "\f38b";
+}
+.icon__whatsapp:before {
+  content: "\ea93";
+}
+.icon__link:before {
+  content: "\e9cb";
 }

@@ -1,17 +1,17 @@
 import menu from './menu.js';
 import image from './image.js';
-import instagram from './instagram.js';
+//import instagram from './instagram.js';
 import youtube from './youtube';
-import grid from './grid';
 import commentTabs from './comment-tabs';
+import shareFunctionality from './share';
 
 window.mqv = {
     init: () => {
-        new menu().bind(".menu-mobile", ".sidebar");
-        new image().loadAll();
-        new instagram().init();
-        new youtube().loadVideo();
-        new grid().placeMainGrid();
-        new commentTabs().init();
+        menu.bind(".menu-mobile", ".sidebar");
+        image.loadAll();
+        //new instagram().init();
+        youtube.loadVideo();
+        commentTabs.init();
+        shareFunctionality.init();
     }
 };
