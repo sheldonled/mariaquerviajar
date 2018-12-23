@@ -1,6 +1,8 @@
 import dom from './dom';
 
 const init = () => {
+  if(!document.querySelector('.post-share')) return;
+  
   document.body.addEventListener('scroll', shareScrollListener);
   dom.getNodeElements('.js-copy-share-link').forEach(el => el.addEventListener('click', evt => {
     evt.preventDefault();
