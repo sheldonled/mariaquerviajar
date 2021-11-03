@@ -1,0 +1,17 @@
+{
+  "name": "mariaquerviajar.com",
+  "version": "2.0.0",
+  "description": "Maria Quer Viajar Website built with nuxt.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sheldonled/mariaquerviajar.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sheldonled/mariaquerviajar/issues"
+  },
+  "homepage": "https://mariaquerviajar.com"
+}
