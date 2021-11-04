@@ -3,7 +3,11 @@
   "version": "2.0.0",
   "description": "Maria Quer Viajar Website built with nuxt.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "start": "nuxt start"
   },
   "repository": {
     "type": "git",
@@ -13,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/sheldonled/mariaquerviajar/issues"
   },
-  "homepage": "https://mariaquerviajar.com"
+  "homepage": "https://mariaquerviajar.com",
+  "dependencies": {
+    "nuxt": "^2.15.8"
+  }
 }
