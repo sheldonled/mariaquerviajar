@@ -20,5 +20,9 @@
   "homepage": "https://mariaquerviajar.com",
   "dependencies": {
     "nuxt": "^2.15.8"
+  },
+  "devDependencies": {
+    "sass": "^1.43.4",
+    "sass-loader": "^10"
   }
 }
