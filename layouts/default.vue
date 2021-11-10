@@ -15,7 +15,7 @@ export default {
   </div>
 </template>
 
-<style>
+<style lang="scss">
 html {
   font-family: "Be Vietnam", sans-serif;
 }
@@ -27,7 +27,14 @@ body {
   max-width: 68.75rem;
   margin: 0 auto;
 }
-:root {
-  --yellow-bg-color: #e7a603;
+.btn-primary {
+  background-color: $primary-color;
+  color: $white;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.6rem 2rem;
+  margin: 0.5rem 0;
+  display: inline-block;
+  border-radius: 2rem;
 }
 </style>
