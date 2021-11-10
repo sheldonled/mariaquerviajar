@@ -25,6 +25,10 @@ export default {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Be+Vietnam&display=swap",
       },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap",
+      },
     ],
   },
 
