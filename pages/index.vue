@@ -33,13 +33,16 @@ export default {
   background-color: $yellow-bg-color;
   padding: 0 0 $hero-padding;
 }
+
 .site-hero .wrapper {
   display: flex;
   justify-content: space-between;
 }
+
 .hero-cta {
   width: 50%;
 }
+
 .hero-title {
   font-size: 3rem;
   font-family: "Alfa Slab One", cursive;
@@ -48,6 +51,7 @@ export default {
   font-weight: normal;
   margin: 3rem 0 0;
 }
+
 .hero-subtitle {
   font-size: 1.5rem;
   letter-spacing: 0.2rem;
@@ -55,10 +59,12 @@ export default {
   font-weight: normal;
   margin: 0;
 }
+
 .maria-martins {
   width: 25rem;
   margin: 0 3rem 0 0;
 }
+
 .who-am-i {
   position: relative;
   background-color: $white;
@@ -68,6 +74,7 @@ export default {
   overflow: hidden;
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
 }
+
 .section-pre-title {
   font-size: 1rem;
   letter-spacing: 0.2rem;
@@ -75,6 +82,7 @@ export default {
   font-weight: normal;
   margin: 3.8rem 0 0;
 }
+
 .section-title {
   font-size: 1.8rem;
   text-align: center;
