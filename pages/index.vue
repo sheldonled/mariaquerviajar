@@ -3,7 +3,30 @@ import MARIA_MARTINS from "../assets/img/maria_martins.png";
 
 export default {
   name: "IndexPage",
+  methods: {
+    youtubeLink(videoId) {
+      return `https://www.youtube.com/watch?v=${videoId}`;
+    },
+    youtubeThumbnailSrc(videoId) {
+      return `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`;
+    },
+  },
   MARIA_MARTINS,
+  youtubeVideos: [
+    {
+      id: "S7Fj6UdvR4g",
+      title: "COMPRAS NA IKEA IRLANDA - IKEA TOUR 2021 | Maria Quer Viajar",
+    },
+    {
+      id: "2RWGO1xCpc0",
+      title:
+        "COMO É SER ADOLESCENTE NA IRLANDA? | Diferenças na escola do Brasil e da Irlanda | Maria Quer Viajar",
+    },
+    {
+      id: "M_XjVroo7eQ",
+      title: "05 ERROS AO MUDAR PRA IRLANDA | Maria Quer Viajar",
+    },
+  ],
 };
 </script>
 <template>
@@ -68,6 +91,35 @@ export default {
         </div>
       </section>
     </section>
+    <section class="featured-blog-posts">
+      <h2 class="section-pre-title">Blog</h2>
+      <h3 class="section-title">Em breve</h3>
+    </section>
+    <section class="fatured-youtube-videos">
+      <h2 class="section-pre-title">Youtube</h2>
+      <h3 class="section-title">
+        Conteúdo semanal.
+        <a
+          href="https://www.youtube.com/mariaquerviajar"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Inscreva-se!</a
+        >
+      </h3>
+      <section class="youtube-videos wrapper">
+        <a
+          v-for="video in $options.youtubeVideos"
+          :key="video.id"
+          class="youtube-video"
+          :href="youtubeLink(video.id)"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img :src="youtubeThumbnailSrc(video.id)" :alt="video.title" />
+        </a>
+      </section>
+    </section>
+    <section class="featured-instagram-posts"></section>
   </main>
 </template>
 <style lang="scss" scoped>
@@ -114,11 +166,12 @@ export default {
   padding: 0 7.5rem;
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px 1px $transparent-black;
 }
 
 .my-work {
-  padding: 0 0 2.5rem;
+  padding: 0 0 4rem;
+  overflow: hidden;
 
   & > p {
     padding: 0 7.5rem;
@@ -134,7 +187,7 @@ export default {
   width: calc(25% - 1.6rem);
   margin: 0 0.8rem;
   border-radius: 0.8rem;
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px 1px $transparent-black;
   padding: 1rem;
   text-align: center;
 
@@ -167,6 +220,45 @@ export default {
   background-color: $primary-red;
 }
 
+.featured-blog-posts {
+  background-color: $primary-yellow;
+  padding: 0 0 2.5rem;
+  overflow: hidden;
+
+  .section-pre-title,
+  .section-title {
+    color: $white;
+  }
+}
+
+.youtube-videos {
+  display: flex;
+  padding: 0 0 2.5rem;
+}
+
+.youtube-video {
+  width: calc(33% - 1rem);
+  height: auto;
+  margin: 0 0.5rem;
+  display: block;
+  position: relative;
+
+  &:hover:after {
+    position: absolute;
+    background-color: $transparent-black;
+    content: "";
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
 .section-pre-title {
   font-size: 1rem;
   letter-spacing: 0.2rem;
@@ -178,8 +270,15 @@ export default {
 .section-title {
   font-size: 1.8rem;
   text-align: center;
-  font-family: "Alfa Slab One", cursive;
   letter-spacing: 0.2rem;
+  font-family: "Alfa Slab One", cursive;
+  font-weight: normal;
   margin: 0 0 2.5rem;
+  a {
+    color: $text-default-color;
+    &:hover {
+      color: lighten($text-default-color, 10%);
+    }
+  }
 }
 </style>
