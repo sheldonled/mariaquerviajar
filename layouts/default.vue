@@ -1,10 +1,12 @@
 <script>
 import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
 
 export default {
   name: "DefaultLayout",
   components: {
     Header,
+    Footer,
   },
 };
 </script>
@@ -12,23 +14,31 @@ export default {
   <div>
     <Header />
     <Nuxt />
+    <Footer />
   </div>
 </template>
-
 <style lang="scss">
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: "Be Vietnam", sans-serif;
 }
+
 body {
   margin: 0;
+  color: $text-default-color;
 }
+
 .wrapper {
   width: 100%;
   max-width: 68.75rem;
   margin: 0 auto;
 }
+
 .btn-primary {
-  background-color: $primary-color;
+  background-color: $primary-red;
   color: $white;
   text-decoration: none;
   text-transform: uppercase;
