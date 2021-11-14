@@ -119,7 +119,38 @@ export default {
         </a>
       </section>
     </section>
-    <section class="featured-instagram-posts"></section>
+    <section class="featured-instagram-posts wrapper">
+      <h2 class="section-pre-title">instagram</h2>
+      <h3 class="section-title">
+        Conteúdo diário.
+        <a
+          href="https://instagram.com/mariaquerviajar"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Me siga lá!</a
+        >
+      </h3>
+      <div class="instagram-post">
+        <a
+          href="https://www.instagram.com/p/CUGDnRfI1Uq/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="instagram-post1"
+        ></a>
+        <a
+          href="https://www.instagram.com/p/CUIogrZofIR/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="instagram-post2"
+        ></a>
+        <a
+          href="https://www.instagram.com/p/CT2mkmbIbCx/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="instagram-post3"
+        ></a>
+      </div>
+    </section>
   </main>
 </template>
 <style lang="scss" scoped>
@@ -163,7 +194,7 @@ export default {
   position: relative;
   background-color: $white;
   margin: calc(-1 * calc($hero-padding + 3rem)) auto 0;
-  padding: 0 7.5rem;
+  padding: 0 7.5rem 2.5rem;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 0 5px 1px $transparent-black;
@@ -279,6 +310,39 @@ export default {
     &:hover {
       color: lighten($text-default-color, 10%);
     }
+  }
+}
+.featured-instagram-posts {
+  padding-bottom: 2.5rem;
+}
+
+.instagram-post {
+  display: flex;
+
+  a {
+    width: calc(33% - 1.6rem);
+    background-color: $transparent-black;
+    margin: 0 0.8rem;
+    background-image: url("../assets/img/mqv_instagram_preview.jpg");
+    background-size: 100%;
+
+    &:after {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+  }
+
+  .instagram-post1 {
+    background-position: 0px 0px;
+  }
+
+  .instagram-post2 {
+    background-position: 0px 683px;
+  }
+
+  .instagram-post3 {
+    background-position: 0px 342px;
   }
 }
 </style>

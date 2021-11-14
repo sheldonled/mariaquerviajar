@@ -55,6 +55,7 @@ export default {
   font-size: 0.8rem;
   overflow: hidden;
   padding: 3rem 0;
+  margin: 2.5rem 0 0;
   box-shadow: $header-footer-box-shadow;
 
   a {
