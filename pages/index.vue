@@ -45,7 +45,7 @@ export default {
       </section>
     </section>
     <article class="who-am-i wrapper">
-      <h2 class="section-pre-title">Quem sou eu?</h2>
+      <h2 class="section-pre-title" id="sobre">Quem sou eu?</h2>
       <h3 class="section-title">Prazer, Maria!</h3>
     </article>
     <section class="my-work wrapper">

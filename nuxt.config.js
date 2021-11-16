@@ -54,4 +54,20 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  router: {
+    scrollBehavior(to) {
+      if (to.hash) {
+        const extraPaddingHashes = ["#sobre"];
+        const extraPadding =
+          extraPaddingHashes.indexOf(to.hash) !== -1 ? 160 : 0;
+        const el = document.querySelector(to.hash);
+
+        return window.scrollTo({
+          top: el.getBoundingClientRect().top + window.scrollY - extraPadding,
+          behavior: "smooth",
+        });
+      }
+    },
+  },
 };
