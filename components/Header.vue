@@ -7,33 +7,52 @@ export default {
 };
 </script>
 <template>
-  <header class="site-header">
-    <div class="wrapper">
-      <a href="/">
-        <img :src="$options.LOGO_SVG" class="logo" />
-      </a>
-      <nav class="site-main-navigation">
-        <ul class="site-menu">
-          <li class="site-menu-item"><a href="/">Home</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <div>
+    <header class="site-header">
+      <div class="wrapper">
+        <a href="/">
+          <img :src="$options.LOGO_SVG" class="logo" />
+        </a>
+        <nav class="site-main-navigation">
+          <ul class="site-menu">
+            <li class="site-menu-item">
+              <nuxt-link :to="{ path: '/' }">Home</nuxt-link>
+            </li>
+            <li class="site-menu-item">
+              <nuxt-link :to="{ path: '/', hash: '#sobre' }"
+                >Quem Sou Eu</nuxt-link
+              >
+            </li>
+            <li class="site-menu-item">
+              <nuxt-link :to="{ path: '/' }">Blog</nuxt-link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="site-header-placeholder"></div>
+  </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 .logo {
-  width: 6rem;
-  margin: 0.5rem;
+  width: 5.5rem;
+  margin: 1rem 0;
   display: block;
 }
 
 .site-header {
-  background-color: var(--yellow-bg-color);
+  background-color: $primary-yellow;
+  height: $site-header-height;
   position: fixed;
+  z-index: 1000;
   top: 0;
   left: 0;
   right: 0;
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.7);
+  box-shadow: $header-footer-box-shadow;
+}
+
+.site-header-placeholder {
+  height: $site-header-height;
 }
 
 .site-header .wrapper {
@@ -49,7 +68,7 @@ export default {
 
 .site-menu-item {
   font-size: 0.85rem;
-  margin: 0 1.2rem;
+  margin: 0 1.2rem 0.5rem;
   text-transform: uppercase;
   & a {
     color: #fff;
@@ -61,7 +80,7 @@ export default {
   }
 
   &.active a {
-    color: #db4545;
+    color: $primary-red;
   }
 }
 </style>
