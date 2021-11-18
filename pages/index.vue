@@ -47,6 +47,42 @@ export default {
     <article class="who-am-i wrapper">
       <h2 class="section-pre-title" id="sobre">Quem sou eu?</h2>
       <h3 class="section-title">Prazer, Maria!</h3>
+      <p>
+        Nasci no Rio de Janeiro mas me considero mais goiana do que carioca, já
+        que vivi a maior parte da minha vida em Goiânia. Sempre tive o sonho de
+        morar fora do Brasil mas, olhando para a minha realidade financeira, por
+        muitos anos acreditei que isso seria impossível. Quando me casei com o
+        meu marido, por não conseguir nem pagar um aluguel, moramos de favor na
+        casa de familiares. Durante um bom tempo da minha vida, a minha
+        realidade era correr atrás de pagar as contas e conquistar um pouco de
+        conforto e a ideia de morar fora era muito distante e adormeceu... O
+        tempo passou e, após alguns anos de trabalho, alcançamos salários
+        melhores e nossa situação financeira ficou mais estável mas ainda assim
+        não conseguíamos ter a vida confortável que a gente desejava, sabe?
+        Fazer passeios de final de semana, viajar, comprar coisas de marca e ter
+        uma casa própria ainda não cabiam no nosso bolso. E a sensação era de
+        que trabalhávamos e trabalhávamos, mas o dinheiro não dava pra nada.
+      </p>
+      <p>
+        Foi quando lembramos do nosso sonho de sair do Brasil e resolvemos
+        tirá-lo do papel. Como uma boa capricorniana que sou eu busquei
+        alternativas, pesquisei e estudei muito, organizei tudo para a nossa
+        mudança de país. Viemos pra Irlanda em 2017 e vivemos aqui desde então.
+        Aqui nós construímos nossa vida, nos estabelecemos profissionalmente,
+        compramos nossa casa dos sonhos, conhecemos vários países e atualmente
+        estamos nos organizando para dar entrada no processo de cidadania
+        irlandesa, já que nem eu e nem o meu marido temos cidadania europeia.
+      </p>
+      <p>
+        Mas mesmo tentando prever e diminuir ao máximo os perrengues ainda assim
+        foi muito difícil nossa mudança e início aqui na Irlanda. Hoje eu sei
+        que sofremos muito mais do que o que precisávamos ter sofrido. E sendo a
+        louca das listas e das planilhas eu documentei TODOS esses anos, desde a
+        mudança do Brasil até o dia de hoje e agora vou compartilhar tudo com o
+        mundo. Essa é a missão do mariaquerviajar, descomplicar sua vida na
+        Irlanda, sua vida como expatriada(o), e facilitar ao máximo a sua
+        mudança e da sua família de país! Seja bem-vindo!
+      </p>
     </article>
     <section class="my-work wrapper">
       <h2 class="section-pre-title">Meu trabalho</h2>
