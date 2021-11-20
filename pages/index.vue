@@ -39,7 +39,9 @@ export default {
             Meu trabalho é ajudar brasileiros a morar e construir vida na
             Irlanda.
           </h2>
-          <a href="/consultoria" class="btn-primary"> Saiba Mais </a>
+          <a href="https://instagram.com/mariaquerviajar" class="btn-primary">
+            Saiba Mais
+          </a>
         </section>
         <img :src="$options.MARIA_MARTINS" class="maria-martins" />
       </section>
