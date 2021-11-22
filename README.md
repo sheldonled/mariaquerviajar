@@ -1,2 +1,3 @@
 # Maria Quer Viajar
-WP theme for [https://mariaquerviajar.com](mariaquerviajar.com)
+
+This is [https://mariaquerviajar.com](mariaquerviajar.com) website, built with nuxt.
