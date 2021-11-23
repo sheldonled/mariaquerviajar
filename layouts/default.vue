@@ -33,8 +33,12 @@ body {
 
 .wrapper {
   width: 100%;
-  max-width: 68.75rem;
   margin: 0 auto;
+  padding: 0 1rem;
+  @media (min-width: 40rem) {
+    max-width: 68.75rem;
+    padding: 0;
+  }
 }
 
 .btn-primary {
