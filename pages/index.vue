@@ -47,6 +47,7 @@ export default {
       </section>
     </section>
     <article class="who-am-i wrapper">
+      <img :src="$options.MARIA_MARTINS" class="maria-martins-mobile" />
       <h2 class="section-pre-title" id="sobre">Quem sou eu?</h2>
       <h3 class="section-title">Prazer, Maria!</h3>
       <p>
@@ -203,66 +204,129 @@ export default {
 }
 
 .hero-cta {
-  width: 50%;
+  width: 100%;
+  @media (min-width: 40rem) {
+    width: 50%;
+  }
 }
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: "Alfa Slab One", cursive;
   letter-spacing: 0.2rem;
   color: $text-white-1;
   font-weight: normal;
   margin: 3rem 0 0;
+  @media (min-width: 40rem) {
+    font-size: 3rem;
+  }
 }
 
 .hero-subtitle {
-  font-size: 1.5rem;
+  font-size: 1rem;
   letter-spacing: 0.2rem;
   color: $white;
   font-weight: normal;
   margin: 0;
+  @media (min-width: 40rem) {
+    font-size: 1.5rem;
+  }
 }
 
 .maria-martins {
   width: 25rem;
   margin: 0 3rem 0 0;
+  display: none;
+  @media (min-width: 40rem) {
+    display: block;
+  }
+}
+
+.maria-martins-mobile {
+  background-color: $primary-yellow;
+  object-fit: contain;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  margin: 1.5rem auto 0;
+  display: block;
+  @media (min-width: 40rem) {
+    display: none;
+  }
 }
 
 .who-am-i {
   position: relative;
   background-color: $white;
-  margin: calc(-1 * calc($hero-padding + 3rem)) auto 0;
-  padding: 0 7.5rem 2.5rem;
+  width: 90%;
+  margin: -14rem auto 2rem;
+  padding: 0 1.5rem 2.5rem;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 0 5px 1px $transparent-black;
+
+  .section-pre-title {
+    margin: 1rem 0 0;
+  }
+
+  @media (min-width: 40rem) {
+    width: 100%;
+    margin: calc(-1 * calc($hero-padding + 3rem)) auto 0;
+    padding: 0 7.5rem 2.5rem;
+
+    .section-pre-title {
+      margin: 3.8rem 0 0;
+    }
+  }
 }
 
 .my-work {
   padding: 0 0 4rem;
   overflow: hidden;
+  color: $white;
+  background-color: $primary-yellow;
+  padding: 0 1rem;
+  margin: 0 auto 2.5rem;
 
-  & > p {
-    padding: 0 7.5rem;
-    margin: 0 0 2.5rem;
+  @media (min-width: 40rem) {
+    color: inherit;
+    background-color: inherit;
+
+    & > p {
+      padding: 0 7.5rem;
+    }
   }
 }
 
 .content-pilars {
   display: flex;
+  flex-flow: column;
+  padding: 0 0 1rem;
+
+  @media (min-width: 40rem) {
+    flex-flow: row;
+  }
 }
 
 .content-pilar {
-  width: calc(25% - 1.6rem);
-  margin: 0 0.8rem;
+  width: calc(100% - 1.6rem);
+  margin: 0 0.8rem 1rem;
   border-radius: 0.8rem;
   box-shadow: 0 0 5px 1px $transparent-black;
   padding: 1rem;
   text-align: center;
+  color: $text-default-color;
+  background-color: $white;
 
   h4 {
     font-size: 1.25rem;
     line-height: 1.5rem;
+  }
+
+  @media (min-width: 40rem) {
+    width: calc(25% - 1.6rem);
+    margin: 0 0.8rem;
+    background-color: transparent;
   }
 }
 
@@ -290,25 +354,38 @@ export default {
 }
 
 .featured-blog-posts {
-  background-color: $primary-yellow;
+  background-color: $white;
   padding: 0 0 2.5rem;
   overflow: hidden;
 
   .section-pre-title,
   .section-title {
-    color: $white;
+    color: $text-default-color;
+  }
+
+  @media (min-width: 40rem) {
+    background-color: $primary-yellow;
+    .section-pre-title,
+    .section-title {
+      color: $white;
+    }
   }
 }
 
 .youtube-videos {
   display: flex;
   padding: 0 0 2.5rem;
+  flex-flow: column;
+
+  @media (min-width: 40rem) {
+    flex-flow: row;
+  }
 }
 
 .youtube-video {
-  width: calc(33% - 1rem);
+  width: calc(100% - 2rem);
   height: auto;
-  margin: 0 0.5rem;
+  margin: 0 1rem 1rem;
   display: block;
   position: relative;
 
@@ -325,6 +402,11 @@ export default {
 
   img {
     width: 100%;
+  }
+
+  @media (min-width: 40rem) {
+    margin: 0 0.5rem;
+    width: calc(33% - 1rem);
   }
 }
 
@@ -356,11 +438,12 @@ export default {
 
 .instagram-post {
   display: flex;
+  flex-flow: column;
 
   a {
-    width: calc(33% - 1.6rem);
+    width: calc(100% - 2rem);
     background-color: $transparent-black;
-    margin: 0 0.8rem;
+    margin: 0 1rem 1rem;
     background-image: url("../assets/img/mqv_instagram_preview.jpg");
     background-size: 100%;
 
@@ -376,11 +459,19 @@ export default {
   }
 
   .instagram-post2 {
-    background-position: 0px 683px;
+    background-position: 0px 50%;
   }
 
   .instagram-post3 {
-    background-position: 0px 342px;
+    background-position: 0px 100%;
+  }
+
+  @media (min-width: 40rem) {
+    flex-flow: row;
+    a {
+      width: calc(33% - 1.6rem);
+      margin: 0 0.8rem;
+    }
   }
 }
 </style>
