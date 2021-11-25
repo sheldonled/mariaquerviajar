@@ -21,7 +21,7 @@ export default {
           Um guia para expatriados na Irlanda. Como morar e construir vida na
           Irlanda
         </p>
-        <p>© 2021 by #mariaquerviajar</p>
+        <p class="footer-signature">© 2021 by #mariaquerviajar</p>
       </section>
       <section class="footer-socials">
         <p>Me siga nas redes</p>
@@ -39,11 +39,12 @@ export default {
             ><img :src="$options.YOUTUBE_SVG" class="social-icons__youtube"
           /></a>
         </div>
-        <p>
+        <p class="footer-email">
           <a href="mailto:mariaquerviajaroficial@gmail.com"
             >mariaquerviajaroficial@gmail.com</a
           >
         </p>
+        <p class="footer-signature">© 2021 by #mariaquerviajar</p>
       </section>
     </div>
   </footer>
@@ -66,25 +67,69 @@ export default {
 
 .site-footer .wrapper {
   display: flex;
-  justify-content: space-between;
+  flex-flow: column;
+  padding: 0 1rem;
+
+  @media (min-width: 40rem) {
+    flex-flow: row;
+    justify-content: space-between;
+  }
 }
 
 .footer-message {
-  max-width: 16rem;
+  display: flex;
+
+  .footer-signature {
+    display: none;
+  }
+
+  @media (min-width: 40rem) {
+    display: block;
+    max-width: 16rem;
+
+    .footer-signature {
+      display: block;
+    }
+  }
 }
 
 .footer-socials {
-  max-width: 20rem;
+  text-align: center;
+
+  .footer-email {
+    display: none;
+  }
+
+  .footer-signature {
+    display: block;
+  }
+
+  @media (min-width: 40rem) {
+    max-width: 20rem;
+
+    .footer-signature {
+      display: none;
+    }
+    .footer-email {
+      display: block;
+    }
+  }
 }
 
 .logo {
   width: 7rem;
-  margin: 1rem 0;
+  margin: 1rem 1rem 0 0;
   display: block;
+
+  @media (min-width: 40rem) {
+    margin: 1rem 0;
+  }
 }
 
 .social-icons {
   display: flex;
+  margin: 0 auto;
+  width: 5rem;
 
   img {
     width: 2.5rem;
