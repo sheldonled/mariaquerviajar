@@ -30,7 +30,7 @@ jspm_packages/
 .nuxt
 
 # Nuxt generate
-dist
+.output
 
 # OS generated files
 .DS_Store

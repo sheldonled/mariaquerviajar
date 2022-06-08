@@ -1,78 +1,54 @@
-export default {
-  // Target: https://go.nuxtjs.dev/config-target
+import { defineNuxtConfig } from "nuxt";
+
+export default defineNuxtConfig({
+  // https://v3.nuxtjs.org/api/configuration/nuxt.config#ssr
+  ssr: false,
   target: "static",
-
-  // Global page headers: https://go.nuxtjs.dev/config-head
-  head: {
-    title: "Maria Quer Viajar",
-    htmlAttrs: {
-      lang: "pt-BR",
+  // Global page headers: https://v3.nuxtjs.org/api/configuration/nuxt.config#head
+  app: {
+    head: {
+      title: "Maria Quer Viajar",
+      htmlAttrs: {
+        lang: "pt-BR",
+      },
+      meta: [
+        { charset: "utf-8" },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        { hid: "description", name: "description", content: "" },
+        { name: "format-detection", content: "telephone=no" },
+      ],
+      link: [
+        { rel: "icon", type: "image/svg", href: "/favicon.svg" },
+        { rel: "preconnect", href: "https://fonts.googleapis.com" },
+        {
+          rel: "preconnect",
+          href: "https://fonts.gstatic.com",
+          crossorigin: true,
+        },
+        {
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css2?family=Be+Vietnam&display=swap",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap",
+        },
+      ],
     },
-    meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" },
-      { name: "format-detection", content: "telephone=no" },
-    ],
-    link: [
-      { rel: "icon", type: "image/svg", href: "/favicon.svg" },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      {
-        rel: "preconnect",
-        href: "https://fonts.gstatic.com",
-        crossorigin: true,
-      },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Be+Vietnam&display=swap",
-      },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap",
-      },
-    ],
   },
-
-  // Global CSS: https://go.nuxtjs.dev/config-css
+  // Global CSS: https://v3.nuxtjs.org/api/configuration/nuxt.config#css
   css: [],
-
-  styleResources: {
-    scss: ["~/assets/scss/variables.scss"],
+  // Auto import components: https://v3.nuxtjs.org/api/configuration/nuxt.config#components
+  components: {
+    dirs: ["~/components"],
   },
-
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
-
-  // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
-
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
-
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/style-resources"],
-
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
-
-  router: {
-    scrollBehavior(to) {
-      let top = 0;
-
-      if (to.hash) {
-        const extraPaddingHashes = ["#sobre"];
-        const extraPadding =
-          extraPaddingHashes.indexOf(to.hash) !== -1 ? 160 : 0;
-        const el = document.querySelector(to.hash);
-        if (el) {
-          top = el.getBoundingClientRect().top + window.scrollY - extraPadding;
-        }
-      }
-
-      return window.scrollTo({
-        top,
-        behavior: "smooth",
-      });
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@import "~/assets/scss/variables.scss";',
+        },
+      },
     },
   },
-};
+});

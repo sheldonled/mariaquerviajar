@@ -4,10 +4,10 @@
   "description": "Maria Quer Viajar Website built with nuxt.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nuxt",
+    "dev": "nuxt dev",
     "build": "nuxt build",
     "generate": "nuxt generate",
-    "start": "nuxt start"
+    "preview": "nuxt preview"
   },
   "repository": {
     "type": "git",
@@ -18,11 +18,8 @@
     "url": "https://github.com/sheldonled/mariaquerviajar/issues"
   },
   "homepage": "https://mariaquerviajar.com",
-  "dependencies": {
-    "nuxt": "^2.15.8"
-  },
   "devDependencies": {
-    "@nuxtjs/style-resources": "^1.2.1",
+    "nuxt": "3.0.0-rc.3",
     "sass": "^1.43.4",
     "sass-loader": "^10"
   }
